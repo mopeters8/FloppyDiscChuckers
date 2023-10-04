@@ -5,7 +5,7 @@
 }
 
 :root {
-  --dark-bg-color: #1f2937;
+  --dark-bg-color: #1f371f;
 }
 
 /* Navigation Bar */
@@ -41,13 +41,17 @@ nav .rightHeader a {
 .main {
   background-color: var(--dark-bg-color);
   display: flex;
-  justify-content: space-evenly;
-  padding: 100px 40px;
-  gap: 60px;
+
+  justify-content: center;
+  align-content: center;
+
+  padding: 100px 0px;
+  gap: 50px;
 }
 
 .main .mainText {
-  width: 350px;
+  /* width: 550px; */
+  align-self: center;
 }
 
 .main .mainText p {
@@ -74,14 +78,28 @@ button {
 }
 
 .main .imagePlaceholder {
-  width: 400px;
-  height: 170px;
-  background-color: grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* width: auto; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  border: 3px solid black;
+}
+
+/* CAROUSEL */
+
+.mopbox-carousel {
+  width: 800px;
+  height: 400px;
+}
+
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-caption {
   color: white;
-  font-size: 14px;
+  font-size: 24px;
+  /* -webkit-text-stroke: 1px black; */
 }
 
 /* RANDOM INFORMATION */

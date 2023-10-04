@@ -3,13 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Landing Page</title>
   </head>
   <body>
     <nav>
       <div class="leftHeader">
-        <h2>Header Logo</h2>
+        <h2>The Meadow</h2>
       </div>
       <div class="rightHeader">
         <p><a href="">header link one</a></p>
@@ -19,15 +30,107 @@
     </nav>
     <section class="main">
       <div class="mainText">
-        <h1>This website is awesome</h1>
+        <h1>
+          Awful at games?<br />
+          But appreciate your mom?
+        </h1>
         <p>
-          This website has some subtext that goes here under the main title.
-          It's a smaller font and the color is lower contrast.
+          This gaming organization is for you. We assemble the best PC gaming
+          amateurs to try games and fail spectacularly.
         </p>
         <button>Sign Up</button>
       </div>
       <div class="imagePlaceholder">
-        <label for="">this is palceholder for an image</label>
+        <section class="mopbox-carousel">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="images/tf2setup.jpeg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Comedic Fun</h5>
+                  <p>
+                    Banter and chaos in <em>Team Fortress 2's</em> iconic team
+                    battles.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/GuardiansonMoon.webp"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Precision & Loot</h5>
+                  <p>
+                    Fireteams completing organized raids, or simple weekly
+                    bounties.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/csfbi.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Competitive Strategy</h5>
+                  <p>
+                    Fight as a well-oiled team in <em>Counter-Strike 2</em>'s
+                    premier matches.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
       </div>
     </section>
     <section class="randomInformation">
@@ -59,6 +162,7 @@
         </div>
       </div>
     </section>
+
     <section class="quote">
       <blockquote>
         This is an inspiring quote, or testimonial from a customer. Maybe it's
@@ -76,6 +180,15 @@
         <button>Sign Up</button>
       </div>
     </section>
+
     <footer>Copyright The Odin Project 2023</footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
   </body>
 </html>
