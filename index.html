@@ -9,34 +9,45 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Landing Page</title>
+    <title>Meadow Inn - Come Relax</title>
   </head>
   <body>
     <nav>
       <div class="leftHeader">
-        <h2>The Meadow</h2>
+        <h2>The Meadow Inn</h2>
+        <img class="fire" src="images/campfire.webp" />
       </div>
       <div class="rightHeader">
-        <p><a href="">header link one</a></p>
-        <p><a href="">header link two</a></p>
-        <p><a href="">header link three</a></p>
+        <p><a href="">Portals</a></p>
+        <p><a href="">Discord</a></p>
+        <p>
+          <a
+            href="https://steamcommunity.com/groups/TheMeadowInn"
+            target="_blank"
+            >Steam Group</a
+          >
+        </p>
       </div>
     </nav>
+
     <section class="main">
       <div class="mainText">
-        <h1>
-          Awful at games?<br />
-          But appreciate your mom?
-        </h1>
+        <h1>Where all find rest, relief, and video games.</h1>
         <p>
-          This gaming organization is for you. We assemble the best PC gaming
-          amateurs to try games and fail spectacularly.
+          Humble gaming group that celebrates the values of community & 'for
+          fun' gaming.
+          <br />
+          Interested in joining the group?
         </p>
         <button>Sign Up</button>
       </div>
@@ -95,7 +106,12 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="images/csfbi.jpg" class="d-block w-100" alt="..." />
+                <img
+                  class="unfitcs"
+                  src="images/csfbi.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Competitive Strategy</h5>
                   <p>
@@ -133,44 +149,104 @@
         </section>
       </div>
     </section>
-    <section class="randomInformation">
-      <h2>Some random information.</h2>
-      <div class="imageTiles">
-        <div class="tile">
-          <div class="image"></div>
-          <p class="subtext">
-            This is some subtext under an illustration or image.
+
+    <section class="mission">
+      <div class="title"><h2>Our Mission & Values</h2></div>
+      <div class="valuesList">
+        <div class="value">
+          <span class="material-symbols-outlined"> diversity_1 </span>
+          <h3>Community</h3>
+          <p>
+            The heartbeat that transforms a group of individuals into a
+            tight-knit family bound by a shared passion for relaxing. This sense
+            of belonging creates a support system where members celebrate
+            victories together, console each other in defeats, and continually
+            inspire one another to grow and improve.
           </p>
         </div>
-        <div class="tile">
-          <div class="image"></div>
-          <p class="subtext">
-            This is some subtext under an illustration or image.
+        <div class="value">
+          <span class="material-symbols-outlined"> rocket </span>
+          <h3>Self Refinement</h3>
+          <p>
+            Self-refinement within a small gaming organization is the driving
+            force behind personal and collective progress. It embodies the
+            pursuit of excellence, encouraging members to continually hone their
+            gaming skills, communication abilities, and leadership qualities.
           </p>
         </div>
-        <div class="tile">
-          <div class="image"></div>
-          <p class="subtext">
-            This is some subtext under an illustration or image.
+        <div class="value">
+          <span class="material-symbols-outlined"> menu_book </span>
+          <h3>Prioritization</h3>
+          <p>
+            We emphasize the importance of balance in the lives of its members.
+            Recognizing that gaming is just one facet of a multifaceted
+            existence, we encourage responsible time management and a focus on
+            maintaining a healthy work/life balance. Can't play for a month due
+            to a big final coming up? We'll be here waiting once you Ace it.
           </p>
         </div>
-        <div class="tile">
-          <div class="image"></div>
-          <p class="subtext">
-            This is some subtext under an illustration or image.
+        <div class="value">
+          <span class="material-symbols-outlined">
+            sentiment_very_satisfied
+          </span>
+          <h3>For-Fun</h3>
+          <p>
+            This is <b>absolutely</b> a 'for-fun environment'. We are here to
+            chill, relax, and have fun in our favorite games. We aim to escape
+            the stresses, anxieties, and constant pressures of our day-to-day
+            lives. <br />Hop in, <span class="strike">live-laugh-love</span> and
+            frag out with a smile. :)
           </p>
         </div>
       </div>
     </section>
 
+    <section class="randomInformation">
+      <h2>Portals</h2>
+      <div class="imageTiles">
+        <div class="tile">
+          <div class="image">
+            <div class="fade-box">
+              <img src="images/deucePic.png" alt="" />
+              <img
+                class="hover-img"
+                id="blitz"
+                src="images/blitzPic.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <p class="subtext">Meet the Team</p>
+        </div>
+        <div class="tile">
+          <div class="image">
+            <div class="fade-box">
+              <img src="images/valorant-square-logo.webp" id="val" alt="" />
+              <img class="hover-img" src="images/rl2.jpg" alt="" />
+            </div>
+          </div>
+          <p class="subtext">Games Being Played</p>
+        </div>
+        <div class="tile">
+          <div class="image"></div>
+          <p class="subtext">Media</p>
+        </div>
+        <div class="tile">
+          <div class="image"></div>
+          <p class="subtext">Resources</p>
+        </div>
+        <div class="tile">
+          <div class="image"></div>
+          <p class="subtext">Calendar</p>
+        </div>
+      </div>
+    </section>
+
     <section class="quote">
-      <blockquote>
-        This is an inspiring quote, or testimonial from a customer. Maybe it's
-        just filling up space, or maybe people will actually read it. Who knows?
-        All I know is that it looks nice.
-      </blockquote>
+      <blockquote>Two areas displaying steam group & discord group</blockquote>
       <cite>-Thor, God of Thunder</cite>
     </section>
+
     <section class="callaction">
       <div class="actionbox">
         <div>
