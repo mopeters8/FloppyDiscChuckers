@@ -26,6 +26,9 @@ p {
   */
 }
 
+body {
+  height: 100%;
+}
 /* Navigation Bar */
 
 nav {
@@ -34,6 +37,10 @@ nav {
   justify-content: space-between;
   padding: 30px 160px;
   color: white;
+  background-color: black;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
 }
 
 nav .leftHeader {
@@ -67,13 +74,16 @@ nav .rightHeader a {
 }
 
 /* MAIN SECTION */
+.content {
+  margin-right: 200px;
+}
 
 .main {
-  background-color: var(--dark-bg-color);
+  background-color: rgb(35, 35, 35);
   display: flex;
   flex-direction: column;
 
-  padding: 50px 0px;
+  padding: 150px 0px 50px;
   gap: 30px;
 }
 
@@ -222,6 +232,7 @@ button {
 /* RANDOM INFORMATION */
 
 .randomInformation {
+  background-color: rgb(156, 156, 156);
   padding: 40px;
   display: flex;
   flex-direction: column;
