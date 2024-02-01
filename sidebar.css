@@ -1,10 +1,68 @@
 .sidebar {
-  min-height: 100vh;
-  width: 200px;
-  position: fixed;
-  top: 0;
-  right: 0px;
-  padding: 125px 0px 0px 10px;
+  padding: 110px 0px 0px 0px;
   background-color: #1f371f;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 225px;
+}
+
+.sidebar .titles:not(:first-child) {
+  padding: 20px 0px 0px;
+}
+
+/* Tag Leaderboard */
+
+.tags {
+  color: white;
+  border: solid white 2px;
+  border-radius: 2px;
+  text-align: center;
+  width: 90%;
+}
+
+.tags table {
+  width: 100%;
+}
+
+.tags th {
+  padding: 0 15px;
+}
+
+.tags tr {
+  border-bottom: 2px solid white;
+}
+
+.tags tr:last-child {
+  border-bottom: none;
+}
+
+/* Next Event */
+
+.nextEvent {
+  border: solid white 2px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nextEvent span {
+  font-size: 20px;
+  align-self: center;
+}
+
+.nextEvent p {
+  font-size: 16px;
+}
+
+/* RSS FEED */
+
+.rssFeed {
+  border: white 2px solid;
+  width: 90%;
+  overflow: scroll;
+  max-height: 600px;
 }
