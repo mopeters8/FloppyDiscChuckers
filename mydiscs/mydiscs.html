@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Discs</title>
+  </head>
+  <body>
+    <h1>List of Discs</h1>
+    <div class="listOfDiscs">
+      <ul class="discList"></ul>
+    </div>
+
+    <script>
+      fetch("https://discit-api.fly.dev/disc?category=Putter")
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          data.forEach((disc) => {
+            const markup = `
+            
+            <li>
+                <img src="${disc.pic}">
+                <p style='font-size: 24px;'>${disc.name}</p>
+                Brand: ${disc.brand}
+            </li>`;
+
+            document
+              .querySelector(".discList")
+              .insertAdjacentHTML("beforeend", markup);
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

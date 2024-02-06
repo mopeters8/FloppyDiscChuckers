@@ -32,6 +32,7 @@ body {
 .allContent {
   display: flex;
   flex-direction: column;
+  max-height: min-content;
 }
 
 .page {
@@ -181,7 +182,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  padding: 10px 20px;
+  border-right: 2px solid black;
+  border-top: 4px solid black;
 }
 
 .mission .title h2 {
@@ -191,8 +194,6 @@ button {
 .mission .valuesList {
   display: flex;
   flex-direction: row;
-  width: 80%;
-
   justify-content: space-around;
   align-items: stretch;
   gap: 30px;
@@ -230,72 +231,39 @@ button {
   text-decoration: line-through;
 }
 
-/* RANDOM INFORMATION */
+/* SOCIAL LINKS */
 
 .randomInformation {
-  background-color: rgb(156, 156, 156);
-  padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: end;
-  gap: 30px;
-  width: 50%;
-}
-
-.randomInformation h2 {
-  font-size: 45px;
-}
-
-.randomInformation .imageTiles {
-  display: flex;
-  flex-direction: column;
-
-  align-items: end;
-}
-
-.randomInformation .imageTiles .tile {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  color: rgb(30, 30, 30);
-  font-size: 15px;
 }
 
-.randomInformation .imageTiles .tile .image {
-  width: 150px;
-  height: 150px;
-  border: 4px #535353 solid;
-  border-radius: 15px;
-  background-color: black;
+.randomInformation .socialLinks {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
 }
 
-.fade-box {
-  border-radius: 15px;
-  position: relative;
-  cursor: pointer;
+.randomInformation .socialLinks li {
+  list-style: none;
+  padding: 50px 0px;
 }
 
-.fade-box img {
-  width: 100%;
-  height: auto;
-  transition: all ease-in-out 0.5s;
-  border-radius: 12px;
+.socialLinks li a {
+  display: inline-block;
+  color: white;
+  display: inline-block;
 }
 
-.fade-box img.hover-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+.socialLinks li a i {
+  transform: scale(5);
+  transition: 0.2s;
 }
 
-.fade-box:hover img {
-  opacity: 0;
-}
-
-.fade-box:hover img.hover-img {
-  opacity: 0.85;
+.socialLinks li a i:hover {
+  transform: scale(7);
 }
 
 /* STEAM & DSCORD SECTION */

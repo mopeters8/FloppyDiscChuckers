@@ -26,11 +26,11 @@
   width: 100%;
 }
 
-.tags th {
+.tagBoard th {
   padding: 0 15px;
 }
 
-.tags tr {
+.tagBoard tr {
   border-bottom: 2px solid white;
 }
 
