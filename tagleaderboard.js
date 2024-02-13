@@ -21,7 +21,7 @@ async function readCSV() {
 
     if (res.status === 200) {
       const data = await res.text();
-      console.log(data);
+      // console.log(data);
       return data;
     } else {
       console.log(`Error code ${res.status}`);
@@ -38,7 +38,7 @@ async function createLeaderboard(tagCSV) {
   namesList = tagCSV.split("\n");
   namesList.forEach((element) => {
     let name = element.replaceAll('"', "");
-    console.log(name);
+    // console.log(name);
 
     let tableRow = `
     <tr>

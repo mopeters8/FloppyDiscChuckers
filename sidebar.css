@@ -9,7 +9,7 @@
 }
 
 .sidebar .titles:not(:first-child) {
-  padding: 20px 0px 0px;
+  padding: 15px 0px 0px;
 }
 
 /* Tag Leaderboard */
@@ -56,4 +56,44 @@
 
 .nextEvent p {
   font-size: 16px;
+}
+
+/* This Visit Disc */
+.thisVisitDisc {
+  border: solid white 2px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.discData a {
+  text-decoration: none;
+  color: white;
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .type {
+    font-size: 16px;
+  }
+
+  .specs {
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 24px;
+  }
+}
+
+.discData img {
+  padding: 5px;
+  width: 98%;
 }
