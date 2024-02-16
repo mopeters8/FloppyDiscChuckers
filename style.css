@@ -11,6 +11,15 @@
   font-family: "Poppins";
 }
 
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 p {
   font-weight: 300;
 }
@@ -91,28 +100,20 @@ nav .rightHeader a {
 
 /* MAIN SECTION */
 
-.content {
-  width: 100%;
-}
-
 .main {
   background-color: rgb(35, 35, 35);
   color: whitesmoke;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   padding: 110px 0px 50px;
-  gap: 30px;
 }
 
 .rssDiv {
-  width: 40%;
+  height: auto;
 }
 
 .rssFeed {
   background-color: #121212;
   border: white 2px solid;
-  max-height: 354px;
+  height: 375px;
 
   overflow: scroll;
   padding: 20px;
@@ -124,9 +125,13 @@ nav .rightHeader a {
   display: none;
 }
 
-.rssFeed .feed-item-title a {
-  text-decoration: none;
-  color: green;
+.rssFeed .feed-item-title {
+  font-size: 1.3rem; /* was 1.5rem */
+
+  a {
+    text-decoration: none;
+    color: green;
+  }
 }
 
 .rssFeed .field-items .field-item a img {
@@ -134,31 +139,24 @@ nav .rightHeader a {
   height: auto;
 }
 
-.midSection {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--dark-bg-color-2);
-}
-
 /* CAROUSEL */
 
-/* Carousel resizing link that I found useful. */
-/* https://stackoverflow.com/questions/51649198/the-same-size-of-images-in-carousel-slide */
 .mopbox-carousel {
   border: 2px solid white;
-  width: 700px;
-  height: auto;
+  /* width: 700px;
+  height: auto; */
 }
 
 .carousel-item {
-  width: 100%;
-  height: 350px;
+  /* width: 100%;
+  height: 350px; */
   /* object-fit: fill; */
 }
 
 .carousel-item img {
-  height: 150% !important;
+  height: 400px; /* set pixel amount. changed from 150%*/
   object-fit: cover;
+  width: 100%;
 }
 
 .carousel-caption {
@@ -166,16 +164,21 @@ nav .rightHeader a {
   font-size: 16px;
 }
 
-/* MISSION + VALUES LIST */
+/* Midsection + Mission & Social Links */
+
+.midSection {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-bg-color-2);
+  padding: 0px 50px;
+  border-top: 4px solid black;
+}
 
 .mission {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px;
-  border-right: 2px solid black;
-  border-top: 4px solid black;
 }
 
 .mission .title h2 {
@@ -198,7 +201,6 @@ nav .rightHeader a {
 .randomInformation {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   padding: 40px 0px;
   background-color: var(--dark-bg-color-2);

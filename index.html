@@ -41,7 +41,7 @@
         </div>
       </nav>
       <div class="page">
-        <section class="sidebar">
+        <section class="sidebar col-2">
           <h3 class="titles">Tags</h3>
           <div class="tags">
             <table id="tagBoard">
@@ -59,13 +59,16 @@
 
           <h3 class="titles">Your Disc</h3>
           <div class="thisVisitDisc">
-            <!-- <div class="discData"></div> -->
+            <div class="discData"></div>
           </div>
         </section>
 
-        <section class="content">
-          <section class="main">
-            <div class="carouselDiv">
+        <section class="col-10">
+          <section
+            class="main px-5 gy-3 row d-flex justify-content-evenly gx-0"
+          >
+            <!-- Carousel -->
+            <div class="carouselDiv col-lg-12 col-xl-6">
               <h2>Latest Updates</h2>
               <section class="mopbox-carousel">
                 <div
@@ -73,6 +76,7 @@
                   class="carousel slide"
                   data-bs-ride="carousel"
                 >
+                  <!-- Indicators -->
                   <div class="carousel-indicators">
                     <button
                       type="button"
@@ -95,6 +99,7 @@
                       aria-label="Slide 3"
                     ></button>
                   </div>
+                  <!-- Inner Carousel with each item. -->
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img
@@ -121,7 +126,7 @@
                     <div class="carousel-item">
                       <img
                         class="unfitcs"
-                        src="images/FDC Pictures/da2889fa-fb6f-407b-933d-178a6fc75c70.jpg"
+                        src="images/FDC Pictures/carouselImages/glowRound.jpg"
                         class="d-block w-100"
                         alt="..."
                       />
@@ -158,16 +163,24 @@
                 </div>
               </section>
             </div>
+            <!-- DiscNerds RSS Feed -->
+            <div class="rssDiv col-lg-6 col-xl-3 px-2">
+              <h2 class="titles">DGA</h2>
+              <div class="rssFeed">
+                <script src="//rss.bloople.net/?url=https%3A%2F%2Ffeeds.feedburner.com%2Fdgadiscgolf&showtitle=false&type=js"></script>
+              </div>
+            </div>
 
-            <div class="rssDiv">
-              <h2 class="titles">PDGA News</h2>
+            <!-- PDGA RSS Feed -->
+            <div class="rssDiv col-lg-6 col-xl-3 h-100">
+              <h2 class="titles">PDGA</h2>
               <div class="rssFeed">
                 <script src="//rss.bloople.net/?url=https%3A%2F%2Fpdga.com%2Ffrontpage%2Ffeed&showtitle=false&type=js"></script>
               </div>
             </div>
           </section>
 
-          <section class="midSection">
+          <section class="midSection row px-5 d-flex gx-0">
             <section class="mission">
               <div class="title"><h2>Mission</h2></div>
               <p class="missionP">
@@ -196,6 +209,12 @@
                     <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>
+                <!-- Email -->
+                <li class="tile">
+                  <a href="mailto:floppydiscchuckers@gmail.com" target="_blank">
+                    <i class="fa-regular fa-envelope"></i>
+                  </a>
+                </li>
                 <!-- Media Drive
                 <li class="tile">
                   <a
@@ -209,63 +228,10 @@
             </section>
           </section>
 
-          <footer>Copyright Floppy Disc Chuckers 2023</footer>
+          <footer class="row">Copyright Floppy Disc Chuckers 2023</footer>
         </section>
       </div>
     </div>
-
-    <script>
-      let discData;
-      async function fetchDiscData() {
-        if (!localStorage.getItem("discID")) {
-          await fetch("https://discit-api.fly.dev/disc")
-            .then((res) => {
-              return res.json();
-            })
-            .then((data) => {
-              const ran = Math.floor(Math.random() * data.length) + 1;
-              localStorage.setItem("discID", data[ran].id);
-              discData = data[ran];
-              console.log(data);
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        } else {
-          let discID = localStorage.getItem("discID");
-          await fetch(`https://discit-api.fly.dev/disc/${discID}`)
-            .then((res) => {
-              return res.json();
-            })
-            .then((data) => {
-              discData = data;
-              console.log(discData);
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        }
-      }
-
-      (async () => {
-        await fetchDiscData();
-        const markup = `
-            <div class="discData">
-              <a href="${discData.link}" target="_blank">
-                  <img src="${discData.pic}">
-                  <p class="name">${discData.name}</p>
-                  <p class="type">${discData.category}</p>
-                  <span class="specs">${discData.speed}|${discData.glide}|${discData.turn}|${discData.fade}</span>
-                  <p class="brand">${discData.brand}</p>
-                </a>
-            </div>`;
-
-        console.log("here");
-        document
-          .querySelector(".thisVisitDisc")
-          .insertAdjacentHTML("beforeend", markup);
-      })();
-    </script>
     <script
       src="https://kit.fontawesome.com/440e9bc411.js"
       crossorigin="anonymous"
@@ -277,6 +243,7 @@
     ></script>
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/bootstrap.js"></script> -->
+    <script src="discs.js"></script>
     <script src="tagleaderboard.js"></script>
   </body>
 </html>

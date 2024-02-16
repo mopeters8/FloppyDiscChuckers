@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 225px;
+  font-size: 16px;
 }
 
 .sidebar .titles:not(:first-child) {
@@ -19,7 +19,7 @@
   border: solid white 2px;
   border-radius: 2px;
   text-align: center;
-  width: 90%;
+  width: 75%;
 }
 
 .tags table {
@@ -42,11 +42,12 @@
 
 .nextEvent {
   border: solid white 2px;
-  width: 90%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 75%;
 }
 
 .nextEvent span {
@@ -61,27 +62,24 @@
 /* This Visit Disc */
 .thisVisitDisc {
   border: solid white 2px;
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 75%;
 }
 
 .discData a {
   text-decoration: none;
   color: white;
+  font-size: 16px;
 
   p {
     margin-bottom: 0px;
   }
 
   .name {
-    font-size: 24px;
-  }
-
-  .type {
-    font-size: 16px;
+    font-size: 1.3em;
   }
 
   .specs {
@@ -89,11 +87,24 @@
   }
 
   .brand {
-    font-size: 24px;
+    font-size: 1.3em;
   }
 }
 
 .discData img {
   padding: 5px;
   width: 98%;
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar .titles {
+    font-size: 1em;
+  }
+  .sidebar .tags {
+    font-size: 0.8em;
+  }
+
+  .discData a {
+    font-size: 0.75em;
+  }
 }
