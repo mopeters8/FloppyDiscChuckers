@@ -1,11 +1,11 @@
 .sidebar {
-  padding: 110px 0px 0px 0px;
   background-color: #1f371f;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 16px;
+  height: auto;
 }
 
 .sidebar .titles:not(:first-child) {
@@ -92,8 +92,9 @@
 }
 
 .discData img {
+  display: block;
   padding: 5px;
-  width: 98%;
+  width: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -106,5 +107,18 @@
 
   .discData a {
     font-size: 0.75em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar .titles {
+    font-size: 2em;
+  }
+  .sidebar .tags {
+    font-size: 1.8em;
+  }
+
+  .discData a {
+    font-size: 1.5em;
   }
 }

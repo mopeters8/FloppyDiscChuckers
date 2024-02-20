@@ -24,14 +24,88 @@
   </head>
   <body>
     <div class="allContent">
-      <nav>
+      <nav
+        class="navbar navbar-expand-lg border-bottom border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center gap-3" href="/">
+            <img
+              src="/images/FDC Pictures/1FDC logo.PNG"
+              alt="logo"
+              id="siteLogo"
+              class="d-inline-block align-text-top"
+            />
+            <span id="siteName">Floppy Disc <br />Chuckers</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="constructionfiles/construction.html"
+                  target="_blank"
+                  >Media</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="constructionfiles/construction.html"
+                  >My Discs</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="constructionfiles/construction.html"
+                  >Courses</a
+                >
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- <nav>
         <div class="leftHeader">
           <img src="/images/FDC Pictures/1FDC logo.PNG" alt="" id="siteLogo" />
           <h2>Floppy Disc Chuckers</h2>
-          <!-- <img class="fire" src="images/campfire.webp" /> -->
         </div>
         <div class="rightHeader">
-          <p><a href="mydiscs/mydiscs.html">My Discs</a></p>
+          <p><a href="constructionfiles/construction.html">My Discs</a></p>
           <p><a href="constructionfiles/construction.html">Courses</a></p>
           <p>
             <a href="constructionfiles/construction.html" target="_blank"
@@ -39,37 +113,15 @@
             >
           </p>
         </div>
-      </nav>
-      <div class="page">
-        <section class="sidebar col-2">
-          <h3 class="titles">Tags</h3>
-          <div class="tags">
-            <table id="tagBoard">
-              <tr>
-                <th>Name:</th>
-                <th>Tag:</th>
-              </tr>
-            </table>
-          </div>
-          <h3 class="titles">Next Event</h3>
-          <div class="nextEvent">
-            <span>Elk Grove</span>
-            <p>@ 4:30 PM, Tuesday 1/30/24</p>
-          </div>
-
-          <h3 class="titles">Your Disc</h3>
-          <div class="thisVisitDisc">
-            <div class="discData"></div>
-          </div>
-        </section>
-
-        <section class="col-10">
+      </nav> -->
+      <div class="page row d-flex gx-0">
+        <section class="main pt-3 col-sm-12 col-md-10">
           <section
-            class="main px-5 gy-3 row d-flex justify-content-evenly gx-0"
+            class="topRow px-5 pb-5 gy-3 row d-flex justify-content-center gx-0"
           >
             <!-- Carousel -->
-            <div class="carouselDiv col-lg-12 col-xl-6">
-              <h2>Latest Updates</h2>
+            <div class="col-lg-12 col-xl-10 col-xxl-10">
+              <h2 class="text-center">Latest FDC</h2>
               <section class="mopbox-carousel">
                 <div
                   id="carouselExampleCaptions"
@@ -107,18 +159,18 @@
                         class="d-block w-100"
                         alt="..."
                       />
-                      <div class="carousel-caption d-none d-md-block">
+                      <div class="carousel-caption">
                         <h5>Fun Events</h5>
-                        <p>Come participate in our FDC Tournaments!</p>
+                        <p>Participate in FDC Tournaments!</p>
                       </div>
                     </div>
                     <div class="carousel-item">
                       <img
-                        src="images/FDC Pictures/7624ae78-a01d-46eb-9c96-db2a6e9d0be7.jpg"
+                        src="images/FDC Pictures/carouselImages/christmasCup.png"
                         class="d-block w-100"
                         alt="..."
                       />
-                      <div class="carousel-caption d-none d-md-block">
+                      <div class="carousel-caption">
                         <h5>Celebrate Holidays</h5>
                         <p>Play all year round, with special festivities.</p>
                       </div>
@@ -130,7 +182,7 @@
                         class="d-block w-100"
                         alt="..."
                       />
-                      <div class="carousel-caption d-none d-md-block">
+                      <div class="carousel-caption">
                         <h5>Glow Rounds</h5>
                         <p>We play at night too!</p>
                       </div>
@@ -163,24 +215,30 @@
                 </div>
               </section>
             </div>
+          </section>
+
+          <section
+            class="middleRow px-4 pt-1 pb-5 row d-flex justify-content-center gy-2 gx-0"
+          >
+            <h2 class="text-center">Disc Golf News</h2>
             <!-- DiscNerds RSS Feed -->
-            <div class="rssDiv col-lg-6 col-xl-3 px-2">
-              <h2 class="titles">DGA</h2>
+            <div class="rssDiv col-lg-6 col-xl-6 px-2">
+              <h3 class="titles text-center">DGA</h3>
               <div class="rssFeed">
                 <script src="//rss.bloople.net/?url=https%3A%2F%2Ffeeds.feedburner.com%2Fdgadiscgolf&showtitle=false&type=js"></script>
               </div>
             </div>
 
             <!-- PDGA RSS Feed -->
-            <div class="rssDiv col-lg-6 col-xl-3 h-100">
-              <h2 class="titles">PDGA</h2>
+            <div class="rssDiv col-lg-6 col-xl-6 px-2">
+              <h3 class="titles text-center">PDGA</h3>
               <div class="rssFeed">
                 <script src="//rss.bloople.net/?url=https%3A%2F%2Fpdga.com%2Ffrontpage%2Ffeed&showtitle=false&type=js"></script>
               </div>
             </div>
           </section>
 
-          <section class="midSection row px-5 d-flex gx-0">
+          <section class="midSection row p-5 d-flex gx-0">
             <section class="mission">
               <div class="title"><h2>Mission</h2></div>
               <p class="missionP">
@@ -227,22 +285,38 @@
               </ul>
             </section>
           </section>
+        </section>
+        <section class="sidebar py-3 col-sm-12 order-sm-first col-md-2">
+          <h3 class="titles">Tags</h3>
+          <div class="tags">
+            <table id="tagBoard">
+              <tr>
+                <th>Name:</th>
+                <th>Tag:</th>
+              </tr>
+            </table>
+          </div>
+          <h3 class="titles">Next Event</h3>
+          <div class="nextEvent">
+            <span>Elk Grove</span>
+            <p>@ 7:00 PM, Friday 2/23/24</p>
+          </div>
 
-          <footer class="row">Copyright Floppy Disc Chuckers 2023</footer>
+          <h3 class="titles">Your Daily Disc</h3>
+          <div class="thisVisitDisc">
+            <div class="discData"></div>
+          </div>
         </section>
       </div>
     </div>
+    <footer class="row gx-0 justify-content-center">
+      Copyright Floppy Disc Chuckers 2023
+    </footer>
+
     <script
       src="https://kit.fontawesome.com/440e9bc411.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/bootstrap.js"></script> -->
     <script src="discs.js"></script>
     <script src="tagleaderboard.js"></script>
   </body>
