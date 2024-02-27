@@ -1,6 +1,4 @@
-console.log("tag scripts loading...");
-
-async function startLeaderGeneration() {
+export async function startLeaderGeneration() {
   console.log("Starting creation of leaderboard.");
   const data = await readCSV();
   createLeaderboard(data);
@@ -35,7 +33,7 @@ async function createLeaderboard(tagCSV) {
   const board = document.querySelector("#tagBoard");
   let counter = 1;
 
-  namesList = tagCSV.split("\n");
+  let namesList = tagCSV.split("\n");
   namesList.forEach((element) => {
     let name = element.replaceAll('"', "");
     // console.log(name);
@@ -64,5 +62,3 @@ function ordinal_suffix_of(i) {
   }
   return i + "th";
 }
-
-startLeaderGeneration();

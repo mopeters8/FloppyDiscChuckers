@@ -1,4 +1,23 @@
-let discData;
+// All starts here
+export async function LoadRandomDiscData() {
+  console.log("fetching random disc data..");
+  await fetchDiscData();
+  const markup = `
+            <div class="discData">
+              <a href="${discData.link}" target="_blank">
+                  <img src="${discData.pic}">
+                  <p class="name">${discData.name}</p>
+                  <p class="type">${discData.category}</p>
+                  <span class="specs">${discData.speed}|${discData.glide}|${discData.turn}|${discData.fade}</span>
+                  <p class="brand">${discData.brand}</p>
+                </a>
+            </div>`;
+  document
+    .querySelector(".thisVisitDisc")
+    .insertAdjacentHTML("beforeend", markup);
+}
+
+let discData; //leaving it here for the scope. Is this unsafe, or dumb?
 async function fetchDiscData() {
   if (!localStorage.getItem("discID")) {
     console.log("No current random disc found... Generating new one!");
@@ -46,26 +65,6 @@ async function getSpecificDiscbyID(discID) {
     });
 }
 
-// All starts here
-
-(async () => {
-  console.log("fetching random disc data..");
-  await fetchDiscData();
-  const markup = `
-            <div class="discData">
-              <a href="${discData.link}" target="_blank">
-                  <img src="${discData.pic}">
-                  <p class="name">${discData.name}</p>
-                  <p class="type">${discData.category}</p>
-                  <span class="specs">${discData.speed}|${discData.glide}|${discData.turn}|${discData.fade}</span>
-                  <p class="brand">${discData.brand}</p>
-                </a>
-            </div>`;
-  document
-    .querySelector(".thisVisitDisc")
-    .insertAdjacentHTML("beforeend", markup);
-})();
-
 // Token Stuff for timed LocalStorage
 
 function setWithExpiry(key, value, ttl) {
@@ -93,4 +92,37 @@ function getWithExpiry(key) {
     return null;
   }
   return item.value;
+}
+
+// Reusable Functions for other pages
+// export async function getAllDiscs() {
+//   console.log("Getting ALL discs..");
+//   let AllDiscs;
+//   await fetch("https://discit-api.fly.dev/disc")
+//     .then((res) => {
+//       return res.json();
+//     })
+//     .then((data) => {
+//       AllDiscs = data;
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+
+//   return AllDiscs;
+// }
+
+export async function getAllDiscs() {
+  try {
+    console.log("Getting ALL Discs...");
+    const response = await fetch("https://discit-api.fly.dev/disc");
+    if (!response.ok) {
+      throw new Error("failed to fetch discs!");
+    }
+    let data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }

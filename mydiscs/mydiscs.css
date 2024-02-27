@@ -1,0 +1,22 @@
+body {
+  padding-top: 0px;
+}
+
+.myDiscClass {
+}
+
+.allDiscClass {
+}
+
+.discData {
+  border: 2px solid black;
+}
+
+.discData a {
+  text-decoration: none;
+  color: black;
+}
+
+.discData img {
+  width: 100px;
+}
