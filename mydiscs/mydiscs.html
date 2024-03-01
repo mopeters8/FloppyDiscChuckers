@@ -104,13 +104,17 @@
 
     <!-- Test Display buttons -->
     <div class="toggleMode">
-      <button class="showAllDiscs">Show All Discs</button>
-      <button class="showMyDiscs">Show My Discs</button>
+      <button class="button showAllDiscs" type="button">Show All Discs</button>
+      <button class="button showMyDiscs" type="button">Show My Discs</button>
     </div>
 
     <!-- List of areas -->
-    <div class="listOfDiscs">
+    <div id="all-discs" class="listOfDiscs active">
       <ul class="discList"></ul>
+    </div>
+
+    <div id="my-discs" class="listMyDiscs">
+      <ul class="myDiscList"></ul>
     </div>
 
     <!-- <script src="../discs.js" type="module"></script> -->

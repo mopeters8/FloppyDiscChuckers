@@ -66,7 +66,6 @@ async function getSpecificDiscbyID(discID) {
 }
 
 // Token Stuff for timed LocalStorage
-
 function setWithExpiry(key, value, ttl) {
   console.log(
     "setting " + key + " with a value of: " + value + "  [time: " + ttl + "]"
@@ -93,24 +92,6 @@ function getWithExpiry(key) {
   }
   return item.value;
 }
-
-// Reusable Functions for other pages
-// export async function getAllDiscs() {
-//   console.log("Getting ALL discs..");
-//   let AllDiscs;
-//   await fetch("https://discit-api.fly.dev/disc")
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((data) => {
-//       AllDiscs = data;
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-
-//   return AllDiscs;
-// }
 
 export async function getAllDiscs() {
   try {

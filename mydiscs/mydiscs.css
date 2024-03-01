@@ -2,11 +2,21 @@ body {
   padding-top: 0px;
 }
 
-.myDiscClass {
+/* Different Disc List */
+
+.listOfDiscs {
+  display: none;
 }
 
-.allDiscClass {
+.listMyDiscs {
+  display: none;
 }
+
+.active {
+  display: flex;
+}
+
+/* Individual Disc Data */
 
 .discData {
   border: 2px solid black;
