@@ -17,13 +17,8 @@ async function ShowAllDiscs() {
     button.textContent = "Save Disc";
     button.value = disc;
 
-    // button.addEventListener("click", () => {
-    //   saveDiscID(disc);
-    // });
-
     const markup = `
-    <li>
-      <div class="discData">
+      <div class="discData col-md-2">
         <a href="${disc.link}" target="_blank">
             <img src="${disc.pic}">
             <p class="name">${disc.name}</p>
@@ -32,8 +27,7 @@ async function ShowAllDiscs() {
             <p class="brand">${disc.brand}</p>
         </a>
         <button class="saveButton" data-id="${disc}">Save</button>
-      </div>
-    </li>`;
+      </div>`;
 
     const temp = document.createElement("template");
     temp.innerHTML = markup.trim();
@@ -60,8 +54,7 @@ async function createMyDiscsDiv() {
     button.value = disc;
 
     const markup = `
-    <li>
-      <div class="discData">
+      <div class="discData col-md-2">
         <a href="${disc.link}" target="_blank">
             <img src="${disc.pic}">
             <p class="name">${disc.name}</p>
@@ -70,8 +63,7 @@ async function createMyDiscsDiv() {
             <p class="brand">${disc.brand}</p>
         </a>
         <button class="removeButton" data-id="${disc}">Remove</button>
-      </div>
-    </li>`;
+      </div>`;
 
     const temp = document.createElement("template");
     temp.innerHTML = markup.trim();
@@ -79,7 +71,7 @@ async function createMyDiscsDiv() {
 
     discElement.querySelector(".removeButton").addEventListener("click", () => {
       console.log("button to remove disc..." + disc.id);
-      removeDiscFromList(disc.index); //how can i put the index of disc here?
+      removeDiscFromList(disc.id); //how can i put the index of disc here?
     });
 
     document.querySelector(".myDiscList").appendChild(discElement);
@@ -128,12 +120,9 @@ function addDiscToList(discToSave) {
   saveDiscListtoLocalStorage(discList);
 }
 
-function removeDiscFromList(indexToRemove) {
+function removeDiscFromList(discIDtoRemove) {
   let discList = getDiscListFromLocalStorage();
-
-  //indexes change when removing them. Disc can be at index:0, but has value of index:2.
-  //following line then breaks.
-  discList.splice(indexToRemove, 1);
+  discList = discList.filter((disc) => disc.id !== discIDtoRemove);
   saveDiscListtoLocalStorage(discList);
 }
 

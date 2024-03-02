@@ -2,6 +2,12 @@ body {
   padding-top: 0px;
 }
 
+.view {
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
 /* Different Disc List */
 
 .listOfDiscs {
@@ -14,6 +20,8 @@ body {
 
 .active {
   display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
 }
 
 /* Individual Disc Data */
