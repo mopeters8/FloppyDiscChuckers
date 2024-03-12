@@ -20,6 +20,12 @@ body {
 
 .active {
   display: flex;
+  flex-direction: column;
+  /* flex-flow: column wrap; */
+}
+
+.discList {
+  display: flex;
   flex-direction: row;
   flex-flow: row wrap;
 }
@@ -37,4 +43,14 @@ body {
 
 .discData img {
   width: 100px;
+}
+
+/* Toggle Work */
+
+.toggle-header {
+  cursor: pointer;
+}
+
+.toggle-content {
+  display: none;
 }

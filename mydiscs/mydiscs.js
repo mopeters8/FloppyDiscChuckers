@@ -12,6 +12,7 @@ if (document.readyState !== "loading") {
 async function ShowAllDiscs() {
   console.log("loading all discs / users discs");
   const discData = await getAllDiscs();
+  console.log(discData);
   discData.forEach((disc) => {
     const button = document.createElement("button");
     button.textContent = "Save Disc";
@@ -37,7 +38,19 @@ async function ShowAllDiscs() {
       addDiscToList(disc);
     });
 
-    document.querySelector(".discList").appendChild(discElement);
+    if (disc.category == "Distance Driver") {
+      document.querySelector(".distance-driver").appendChild(discElement);
+    } else if (disc.category == "Hybrid Driver") {
+      document.querySelector(".hybrid-driver").appendChild(discElement);
+    } else if (disc.category == "Control Driver") {
+      document.querySelector(".control-driver").appendChild(discElement);
+    } else if (disc.category == "Midrange") {
+      document.querySelector(".midrange").appendChild(discElement);
+    } else if (disc.category == "Putter") {
+      document.querySelector(".putter").appendChild(discElement);
+    } else {
+      document.querySelector(".other").appendChild(discElement);
+    }
   });
 }
 
@@ -136,3 +149,17 @@ function getDiscListFromLocalStorage() {
   const discListJSON = localStorage.getItem("discList");
   return JSON.parse(discListJSON);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var headers = document.querySelectorAll(".toggle-header");
+  headers.forEach(function (header) {
+    header.addEventListener("click", function () {
+      var content = this.nextElementSibling;
+      if (content.style.display === "flex") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "flex";
+      }
+    });
+  });
+});
