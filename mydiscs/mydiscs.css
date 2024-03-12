@@ -1,5 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Barrio&family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
 body {
   padding-top: 0px;
+}
+
+/* Toggle Buttons */
+.toggleMode {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  background-color: #1f371f;
+  color: whitesmoke;
+  padding: 15px;
+  border: 2px black;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: black;
+  transition: 0.5s;
 }
 
 .view {
